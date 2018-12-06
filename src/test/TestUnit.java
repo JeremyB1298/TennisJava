@@ -1,22 +1,52 @@
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
-public class Test {
+public class TestUnit {
 
     TennisMatch tennisMatch;
+    Player player1;
+    Player player2;
 
     @Before
     public void setUp() throws Exception {
-        Player player1 = new Player("Jeremy");
-        Player player2 = new Player("Thomas");
+        player1 = new Player("Jeremy");
+        player2 = new Player("Thomas");
         tennisMatch = new TennisMatch(player1, player2, MatchType.BEST_OF_FIVE, true);
-        tennisMatch.updateWithPointWonBy(player1);
-        System.out.println("Score1: " + player1.getScore() + " / " + "Score2: " + player2.getScore());
     }
 
     @After
     public void tearDown() throws Exception {
     }
 
+    @Test
+    public void test() {
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.getScore();
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.getScore();
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.getScore();
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.getScore();
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.getScore();
+    }
 
 }
