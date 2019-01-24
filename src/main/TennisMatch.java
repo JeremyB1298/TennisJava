@@ -105,10 +105,8 @@ public class TennisMatch {
             || player2.getScore().getGames(actualSet).gameWin() == 6 && player1.getScore().getGames(actualSet).gameWin() <=4) {
             return true;
         } else {
-
+            return false;
         }
-
-        return false;
     }
 
     private void playerWonGame(Player player) {
