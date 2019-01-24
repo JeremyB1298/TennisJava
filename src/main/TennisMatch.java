@@ -85,6 +85,32 @@ public class TennisMatch {
         return false;
     }
 
+    /*public boolean setFinishWithoutTieBreak() {
+        if (matchType == MatchType.BEST_OF_THREE) {
+            if (player2.getScore().getSets().winSet == 2 || player1.getScore().getSets().winSet == 2) {
+                return true;
+            }
+            return false;
+        } else {
+            if (player2.getScore().getSets().winSet == 3 || player1.getScore().getSets().winSet == 3) {
+                return true;
+            }
+            return false;
+        }
+    }*/
+
+    public boolean endSetWithoutTieBreak() {
+
+        if (player1.getScore().getGames(actualSet).gameWin() == 6 && player2.getScore().getGames(actualSet).gameWin() <=4
+            || player2.getScore().getGames(actualSet).gameWin() == 6 && player1.getScore().getGames(actualSet).gameWin() <=4) {
+            return true;
+        } else {
+
+        }
+
+        return false;
+    }
+
     private void playerWonGame(Player player) {
         if (player.getName() == player1.getName()) {
             int gamePlayer = player1.getScore().getGames(actualSet).gameWin();
