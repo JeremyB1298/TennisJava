@@ -19,8 +19,16 @@ public class TennisMatch {
     public void updateWithPointWonBy(Player player) {
         if ( player.getName() == player1.getName() ) {
             player1.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player1.getScore().getGames(actualSet).getPointForGame(actualGame),player1));
+            if (tieBreak) {}
+            else {
+                endSetWithoutTieBreak();
+            }
         } else {
             player2.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player2.getScore().getGames(actualSet).getPointForGame(actualGame),player2));
+            if (tieBreak) {}
+            else {
+                endSetWithoutTieBreak();
+            }
         }
     }
 
@@ -85,6 +93,51 @@ public class TennisMatch {
         return false;
     }
 
+    /*public boolean setFinishWithoutTieBreak() {
+        if (matchType == MatchType.BEST_OF_THREE) {
+            if (player2.getScore().getSets().winSet == 2 || player1.getScore().getSets().winSet == 2) {
+                return true;
+            }
+            return false;
+        } else {
+            if (player2.getScore().getSets().winSet == 3 || player1.getScore().getSets().winSet == 3) {
+                return true;
+            }
+            return false;
+        }
+    }*/
+
+    public boolean endSetWithoutTieBreak() {
+
+        if (player1.getScore().getGames(actualSet).gameWin() == 6 && player2.getScore().getGames(actualSet).gameWin() <=4
+            || player2.getScore().getGames(actualSet).gameWin() == 6 && player1.getScore().getGames(actualSet).gameWin() <=4) {
+            setPlayerWinSet();
+            return true;
+        } else if (player1.getScore().getGames(actualSet).gameWin() >=5 && player2.getScore().getGames(actualSet).gameWin() >=5){
+            if (player1.getScore().getGames(actualSet).gameWin() == player2.getScore().getGames(actualSet).gameWin()+2
+                    || player1.getScore().getGames(actualSet).gameWin() + 2 == player2.getScore().getGames(actualSet).gameWin()) {
+                setPlayerWinSet();
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    private void setPlayerWinSet() {
+        if (player1.getScore().getGames(actualSet).gameWin() > player2.getScore().getGames(actualSet).gameWin()) {
+            player1.getScore().getSets().winSet();
+            actualSet++;
+            resetGamePlayer();
+        } else {
+            player2.getScore().getSets().winSet();
+            actualSet++;
+            resetGamePlayer();
+        }
+    }
+
     private void playerWonGame(Player player) {
         if (player.getName() == player1.getName()) {
             int gamePlayer = player1.getScore().getGames(actualSet).gameWin();
@@ -101,6 +154,11 @@ public class TennisMatch {
         player2.getScore().getGames(actualSet).gameFinish();
     }
 
+    private void resetGamePlayer() {
+        actualGame = 0;
+        player1.getScore().getSets().resetGame();
+        player2.getScore().getSets().resetGame();
+    }
 
     public String pointsForPlayer(Player player) {
         return player.getScore().getGames(actualSet).getPointForGame(actualGame);
@@ -115,7 +173,8 @@ public class TennisMatch {
     }
 
     public int gamesInSetForPlayer(int set, Player player) {
-        return 0;
+
+        return player.getScore().getGames(set).gameWin();
     }
 
     public boolean isFinished() {

@@ -10,5 +10,9 @@ public class Score {
     public Game getGames(int set) {
         return sets.getSet().get(set);
     }
+
+    public Set getSets() {
+        return sets;
+    }
 }
 
