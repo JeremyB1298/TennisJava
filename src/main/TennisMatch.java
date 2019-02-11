@@ -50,12 +50,14 @@ public class TennisMatch {
                     playerWonGame(player);
                     resetPointPlayer();
                     score = "W";
+                    endSetWithoutTieBreak();
                 }
                 break;
             case "A":
                 playerWonGame(player);
                 resetPointPlayer();
                 score = "W";
+                endSetWithoutTieBreak();
                 break;
         default:
             break;
@@ -103,9 +105,28 @@ public class TennisMatch {
 
         if (player1.getScore().getGames(actualSet).gameWin() == 6 && player2.getScore().getGames(actualSet).gameWin() <=4
             || player2.getScore().getGames(actualSet).gameWin() == 6 && player1.getScore().getGames(actualSet).gameWin() <=4) {
+            setPlayerWinSet();
             return true;
+        } else if (player1.getScore().getGames(actualSet).gameWin() >=5 && player2.getScore().getGames(actualSet).gameWin() >=5){
+            if (player1.getScore().getGames(actualSet).gameWin() == player2.getScore().getGames(actualSet).gameWin()+2
+                    || player1.getScore().getGames(actualSet).gameWin() + 2 == player2.getScore().getGames(actualSet).gameWin()) {
+                setPlayerWinSet();
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
+        }
+    }
+
+    private void setPlayerWinSet() {
+        if (player1.getScore().getGames(actualSet).gameWin() > player2.getScore().getGames(actualSet).gameWin()) {
+            player1.getScore().getSets().winSet();
+            actualSet++;
+        } else {
+            player2.getScore().getSets().winSet();
+            actualSet++;
         }
     }
 
@@ -150,4 +171,6 @@ public class TennisMatch {
         System.out.println("Joueur1: " + player1.getScore().getGames(actualSet).getPointForGame(actualGame) + " Game :" + player1.getScore().getGames(actualSet).gameWin() + " / Joueur2: "
                 + player2.getScore().getGames(actualSet).getPointForGame(actualGame) + " Game :" + player2.getScore().getGames(actualSet).gameWin());
     }
+
+
 }
