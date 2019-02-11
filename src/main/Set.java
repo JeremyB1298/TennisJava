@@ -18,8 +18,11 @@ public class Set {
     public int getSetWin() {
         return winSet;
     }
+    public void resetGame() {
+        set.add(new Game());
+    }
 
     public void winSet() {
-        this.winSet = this.winSet++;
+        this.winSet = this.winSet + 1;
     }
 }

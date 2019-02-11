@@ -19,8 +19,16 @@ public class TennisMatch {
     public void updateWithPointWonBy(Player player) {
         if ( player.getName() == player1.getName() ) {
             player1.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player1.getScore().getGames(actualSet).getPointForGame(actualGame),player1));
+            if (tieBreak) {}
+            else {
+                endSetWithoutTieBreak();
+            }
         } else {
             player2.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player2.getScore().getGames(actualSet).getPointForGame(actualGame),player2));
+            if (tieBreak) {}
+            else {
+                endSetWithoutTieBreak();
+            }
         }
     }
 
@@ -50,14 +58,12 @@ public class TennisMatch {
                     playerWonGame(player);
                     resetPointPlayer();
                     score = "W";
-                    endSetWithoutTieBreak();
                 }
                 break;
             case "A":
                 playerWonGame(player);
                 resetPointPlayer();
                 score = "W";
-                endSetWithoutTieBreak();
                 break;
         default:
             break;
@@ -124,9 +130,11 @@ public class TennisMatch {
         if (player1.getScore().getGames(actualSet).gameWin() > player2.getScore().getGames(actualSet).gameWin()) {
             player1.getScore().getSets().winSet();
             actualSet++;
+            resetGamePlayer();
         } else {
             player2.getScore().getSets().winSet();
             actualSet++;
+            resetGamePlayer();
         }
     }
 
@@ -146,6 +154,11 @@ public class TennisMatch {
         player2.getScore().getGames(actualSet).gameFinish();
     }
 
+    private void resetGamePlayer() {
+        actualGame = 0;
+        player1.getScore().getSets().resetGame();
+        player2.getScore().getSets().resetGame();
+    }
 
     public String pointsForPlayer(Player player) {
         return player.getScore().getGames(actualSet).getPointForGame(actualGame);
@@ -160,7 +173,8 @@ public class TennisMatch {
     }
 
     public int gamesInSetForPlayer(int set, Player player) {
-        return 0;
+
+        return player.getScore().getGames(set).gameWin();
     }
 
     public boolean isFinished() {
@@ -171,6 +185,4 @@ public class TennisMatch {
         System.out.println("Joueur1: " + player1.getScore().getGames(actualSet).getPointForGame(actualGame) + " Game :" + player1.getScore().getGames(actualSet).gameWin() + " / Joueur2: "
                 + player2.getScore().getGames(actualSet).getPointForGame(actualGame) + " Game :" + player2.getScore().getGames(actualSet).gameWin());
     }
-
-
 }
