@@ -17,7 +17,10 @@ public class TennisMatch {
     }
 
     public void updateWithPointWonBy(Player player) {
-        if ( player.getName() == player1.getName() ) {
+        if (isFinished()) {
+            System.out.println("Match terminé");
+        } else {
+            if ( player.getName() == player1.getName() ) {
                 if (player1.getScore().decisifGame == null) {
                     player1.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player1.getScore().getGames(actualSet).getPointForGame(actualGame),player1));
 
@@ -25,22 +28,23 @@ public class TennisMatch {
                     player1.getScore().decisifGame.setPointForGame(0,String.valueOf(Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0)) + 1));
                 }
                 if (tieBreak) {
-                endSetWithTieBreak();
+                    endSetWithTieBreak();
                 }
-            else {
-                endSetWithoutTieBreak();
-            }
-        } else {
-            if (player2.getScore().decisifGame == null) {
-                player2.getScore().getGames(actualSet).setPointForGame(actualGame, updatePointScore(player2.getScore().getGames(actualSet).getPointForGame(actualGame), player2));
+                else {
+                    endSetWithoutTieBreak();
+                }
             } else {
-                player2.getScore().decisifGame.setPointForGame(0,String.valueOf(Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0)) + 1));
-            }
-            if (tieBreak) {
-                endSetWithTieBreak();
-            }
-            else {
-                endSetWithoutTieBreak();
+                if (player2.getScore().decisifGame == null) {
+                    player2.getScore().getGames(actualSet).setPointForGame(actualGame, updatePointScore(player2.getScore().getGames(actualSet).getPointForGame(actualGame), player2));
+                } else {
+                    player2.getScore().decisifGame.setPointForGame(0,String.valueOf(Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0)) + 1));
+                }
+                if (tieBreak) {
+                    endSetWithTieBreak();
+                }
+                else {
+                    endSetWithoutTieBreak();
+                }
             }
         }
     }
