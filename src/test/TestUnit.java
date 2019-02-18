@@ -14,7 +14,7 @@ public class TestUnit {
     public void setUp() throws Exception {
         player1 = new Player("Jeremy");
         player2 = new Player("Thomas");
-        tennisMatch = new TennisMatch(player1, player2, MatchType.BEST_OF_FIVE, false);
+        tennisMatch = new TennisMatch(player1, player2, MatchType.BEST_OF_THREE, true);
     }
 
     @After
@@ -32,7 +32,7 @@ public class TestUnit {
         tennisMatch.updateWithPointWonBy(player2);// 40 à A
         tennisMatch.updateWithPointWonBy(player1);// A à 40
         //tennisMatch.getScore();
-        //System.out.println(player1.getScore().getGames().getPointForGame(0));
+        assertEquals("40",tennisMatch.pointsForPlayer(player2));
         assertEquals("A",tennisMatch.pointsForPlayer(player1));
     }
 
@@ -47,6 +47,7 @@ public class TestUnit {
         tennisMatch.updateWithPointWonBy(player1);// A à 40
         tennisMatch.updateWithPointWonBy(player2);// 40 à A
 
+        assertEquals("40",tennisMatch.pointsForPlayer(player1));
         assertEquals("A",tennisMatch.pointsForPlayer(player2));
     }
 
@@ -63,7 +64,7 @@ public class TestUnit {
     }
 
     @Test
-    public void player1WinSet() {
+    public void player2WinWithTieBreak() {
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
@@ -119,58 +120,54 @@ public class TestUnit {
         tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player2);
 
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        //tie break score 6-6
+
         tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player2);
-
-        tennisMatch.getScore();
-        System.out.println(tennisMatch.gamesInSetForPlayer(0,player2));
-
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
-
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
-
-        tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
-
-        tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
-        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
 
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
         tennisMatch.updateWithPointWonBy(player1);
 
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
 
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
 
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
 
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
-        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
 
         tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player2);
@@ -187,8 +184,155 @@ public class TestUnit {
         tennisMatch.updateWithPointWonBy(player2);
         tennisMatch.updateWithPointWonBy(player2);
 
-        System.out.println(tennisMatch.gamesInSetForPlayer(1,player1));
-        tennisMatch.getScore();
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        assertTrue(tennisMatch.isFinished());
+    }
+
+    @Test
+    public void player2Win() {
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        assertEquals(5,tennisMatch.gamesInCurrentSetForPlayer(player1));
+        assertEquals(6,tennisMatch.gamesInCurrentSetForPlayer(player2));
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+        tennisMatch.updateWithPointWonBy(player1);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+        tennisMatch.updateWithPointWonBy(player2);
+
+        assertTrue(tennisMatch.isFinished());
     }
 
 }

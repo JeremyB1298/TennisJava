@@ -18,14 +18,27 @@ public class TennisMatch {
 
     public void updateWithPointWonBy(Player player) {
         if ( player.getName() == player1.getName() ) {
-            player1.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player1.getScore().getGames(actualSet).getPointForGame(actualGame),player1));
-            if (tieBreak) {}
+                if (player1.getScore().decisifGame == null) {
+                    player1.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player1.getScore().getGames(actualSet).getPointForGame(actualGame),player1));
+
+                } else {
+                    player1.getScore().decisifGame.setPointForGame(0,String.valueOf(Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0)) + 1));
+                }
+                if (tieBreak) {
+                endSetWithTieBreak();
+                }
             else {
                 endSetWithoutTieBreak();
             }
         } else {
-            player2.getScore().getGames(actualSet).setPointForGame(actualGame,updatePointScore(player2.getScore().getGames(actualSet).getPointForGame(actualGame),player2));
-            if (tieBreak) {}
+            if (player2.getScore().decisifGame == null) {
+                player2.getScore().getGames(actualSet).setPointForGame(actualGame, updatePointScore(player2.getScore().getGames(actualSet).getPointForGame(actualGame), player2));
+            } else {
+                player2.getScore().decisifGame.setPointForGame(0,String.valueOf(Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0)) + 1));
+            }
+            if (tieBreak) {
+                endSetWithTieBreak();
+            }
             else {
                 endSetWithoutTieBreak();
             }
@@ -33,43 +46,42 @@ public class TennisMatch {
     }
 
     private String updatePointScore(String score, Player player) {
-
-        switch (score) {
-            case "0":
-                score = "15";
-                break;
-            case "15":
-                score = "30";
-                break;
-            case "30":
-                score = "40";
-                break;
-            case "40":
-                if (playerAvantage()) {
-                    score = "A";
-                } else if (player1WinAvantage()) {
+            switch (score) {
+                case "0":
+                    score = "15";
+                    break;
+                case "15":
+                    score = "30";
+                    break;
+                case "30":
+                    score = "40";
+                    break;
+                case "40":
+                    if (playerAvantage()) {
+                        score = "A";
+                    } else if (player1WinAvantage()) {
                         score = "A";
                         player2.getScore().getGames(actualSet).setPointForGame(actualGame,"40");
                     } else if (player2WinAvantage()) {
                         score = "A";
                         player1.getScore().getGames(actualSet).setPointForGame(actualGame,"40");
                     }
-                 else {
+                    else {
+                        playerWonGame(player);
+                        resetPointPlayer();
+                        score = "W";
+                    }
+                    break;
+                case "A":
                     playerWonGame(player);
                     resetPointPlayer();
                     score = "W";
-                }
-                break;
-            case "A":
-                playerWonGame(player);
-                resetPointPlayer();
-                score = "W";
-                break;
-        default:
-            break;
-        }
+                    break;
+                default:
+                    break;
+            }
 
-        return score;
+            return score;
     }
 
     private boolean playerAvantage() {
@@ -107,16 +119,71 @@ public class TennisMatch {
         }
     }*/
 
+    public boolean endSetWithTieBreak() {
+        if (player1.getScore().getGames(actualSet).gameWin() == 6 && player2.getScore().getGames(actualSet).gameWin() <=4
+                || player2.getScore().getGames(actualSet).gameWin() == 6 && player1.getScore().getGames(actualSet).gameWin() <=4) {
+            setPlayerWinSetWithoutTieBreak();
+            return true;
+        } else if (player1.getScore().getGames(actualSet).gameWin() == 7 && player2.getScore().getGames(actualSet).gameWin() == 5
+                || player2.getScore().getGames(actualSet).gameWin() == 7 && player1.getScore().getGames(actualSet).gameWin() == 5) {
+            setPlayerWinSetWithoutTieBreak();
+            return true;
+        }
+        else if (player1.getScore().getGames(actualSet).gameWin() >= 6 && player2.getScore().getGames(actualSet).gameWin() >=6
+        && player1.getScore().decisifGame == null && player2.getScore().decisifGame == null) {
+            player1.getScore().decisifGame = new Game();
+            player2.getScore().decisifGame = new Game();
+            return false;
+        } else if (player1.getScore().decisifGame != null && player2.getScore().decisifGame != null) {
+
+            if (Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))  == 7
+                    && Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))  <= 5 ) {
+                setPlayerWinSetWithTieBreak(player1);
+                player1.getScore().decisifGame = null;
+                player2.getScore().decisifGame = null;
+                return true;
+            }
+            if (Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))  == 7
+                    && Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))  <= 5) {
+                setPlayerWinSetWithTieBreak(player2);
+                player1.getScore().decisifGame = null;
+                player2.getScore().decisifGame = null;
+                return true;
+            } else if (Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))  >= 6
+                    && Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))  >= 6) {
+                if (Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0)) +2 == Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))) {
+                    setPlayerWinSetWithTieBreak(player1);
+                    player1.getScore().decisifGame = null;
+                    player2.getScore().decisifGame = null;
+                    return true;
+                } else if (Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0)) +2 == Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))) {
+                    setPlayerWinSetWithTieBreak(player2);
+                    player1.getScore().decisifGame = null;
+                    player2.getScore().decisifGame = null;
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+
+            }
+        } else {
+                return false;
+            }
+        }
+
     public boolean endSetWithoutTieBreak() {
 
         if (player1.getScore().getGames(actualSet).gameWin() == 6 && player2.getScore().getGames(actualSet).gameWin() <=4
             || player2.getScore().getGames(actualSet).gameWin() == 6 && player1.getScore().getGames(actualSet).gameWin() <=4) {
-            setPlayerWinSet();
+            setPlayerWinSetWithoutTieBreak();
             return true;
         } else if (player1.getScore().getGames(actualSet).gameWin() >=5 && player2.getScore().getGames(actualSet).gameWin() >=5){
             if (player1.getScore().getGames(actualSet).gameWin() == player2.getScore().getGames(actualSet).gameWin()+2
                     || player1.getScore().getGames(actualSet).gameWin() + 2 == player2.getScore().getGames(actualSet).gameWin()) {
-                setPlayerWinSet();
+                setPlayerWinSetWithoutTieBreak();
                 return true;
             } else {
                 return false;
@@ -126,7 +193,13 @@ public class TennisMatch {
         }
     }
 
-    private void setPlayerWinSet() {
+    private void setPlayerWinSetWithTieBreak(Player player) {
+            player.getScore().getSets().winSet();
+            actualSet++;
+            resetGamePlayer();
+    }
+
+    private void setPlayerWinSetWithoutTieBreak() {
         if (player1.getScore().getGames(actualSet).gameWin() > player2.getScore().getGames(actualSet).gameWin()) {
             player1.getScore().getSets().winSet();
             actualSet++;
@@ -174,11 +247,21 @@ public class TennisMatch {
 
     public int gamesInSetForPlayer(int set, Player player) {
 
-        return player.getScore().getGames(set).gameWin();
+        if (player1.getScore().decisifGame == null && player2.getScore().decisifGame == null) {
+            return player.getScore().getGames(set-1).gameWin();
+        } else {
+            return Integer.valueOf(player.getScore().decisifGame.getPointForGame(0));
+        }
+
     }
 
     public boolean isFinished() {
-        return true;
+            if (player1.getScore().getSets().winSet == matchType.numberOfSetsToWin()) {
+                return true;
+            } else if (player2.getScore().getSets().winSet == matchType.numberOfSetsToWin()) {
+                return true;
+            }
+        return false;
     }
 
     public void getScore() {
