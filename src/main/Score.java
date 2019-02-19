@@ -1,36 +1,19 @@
+import java.util.ArrayList;
+
 public class Score {
-    private String pointWon;
-    private String setwon;
-    private String gameWon;
+    private Set sets;
+    public Game decisifGame;
 
-    public Score(String pointWon, String setwon, String gameWon) {
-        this.pointWon = pointWon;
-        this.setwon = setwon;
-        this.gameWon = gameWon;
+    public Score() {
+        this.sets = new Set();
     }
 
-    public void setPointWon(String pointWon) {
-        this.pointWon = pointWon;
+    public Game getGames(int set) {
+        return sets.getSet().get(set);
     }
 
-    public void setSetwon(String setwon) {
-        this.setwon = setwon;
-    }
-
-    public void setGameWon(String gameWon) {
-        this.gameWon = gameWon;
-    }
-
-    public String getPointWon() {
-        return pointWon;
-    }
-
-    public String getSetwon() {
-        return setwon;
-    }
-
-    public String getGameWon() {
-        return gameWon;
+    public Set getSets() {
+        return sets;
     }
 }
 

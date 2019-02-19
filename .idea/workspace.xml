@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dc7e31e-9935-47ca-81f3-50a4376b2dff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/MatchType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Score.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/TennisMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/TennisMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/TennisMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestUnit.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,25 +43,60 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1516361455">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="5600" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="5600" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/TennisMatch.java">
+        <entry file="file://$PROJECT_DIR$/src/main/MatchType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+            <state relative-caret-position="30">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding>
-                <element signature="e#1762#1763#0" expanded="true" />
-                <element signature="e#1788#1789#0" expanded="true" />
-                <element signature="e#1825#1826#0" expanded="true" />
-                <element signature="e#1849#1850#0" expanded="true" />
-                <element signature="e#1909#1910#0" expanded="true" />
-                <element signature="e#1933#1934#0" expanded="true" />
-                <element signature="e#1995#1996#0" expanded="true" />
-                <element signature="e#2019#2020#0" expanded="true" />
-                <element signature="e#2054#2055#0" expanded="true" />
-                <element signature="e#2081#2082#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,37 +105,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
               <folding>
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#361#362#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#487#488#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#92#93#0" expanded="true" />
+                <element signature="e#129#130#0" expanded="true" />
+                <element signature="e#166#167#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/MatchType.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding>
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/TennisMatch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="250" column="51" selection-start-line="250" selection-start-column="51" selection-end-line="250" selection-end-column="51" />
+              <folding>
+                <element signature="e#9658#9659#0" expanded="true" />
+                <element signature="e#9694#9695#0" expanded="true" />
+                <element signature="e#9754#9755#0" expanded="true" />
+                <element signature="e#9824#9825#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Set.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
               <folding>
-                <element signature="e#155#156#0" expanded="true" />
-                <element signature="e#213#214#0" expanded="true" />
                 <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#336#337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,26 +165,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/TestUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="359">
+              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,6 +184,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>playerWonGame</find>
+      <find>updatePointScore</find>
+      <find>resetPointPlayer</find>
+      <find>actualSet++;</find>
+      <find>actualSet</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -155,26 +202,27 @@
         <option value="$PROJECT_DIR$/src/main/MatchStype.java" />
         <option value="$PROJECT_DIR$/src/test/Test.java" />
         <option value="$PROJECT_DIR$/src/main/MatchType.java" />
-        <option value="$PROJECT_DIR$/src/main/Score.java" />
+        <option value="$PROJECT_DIR$/src/main/Game.java" />
         <option value="$PROJECT_DIR$/src/main/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/Set.java" />
+        <option value="$PROJECT_DIR$/src/main/Score.java" />
         <option value="$PROJECT_DIR$/src/main/TennisMatch.java" />
         <option value="$PROJECT_DIR$/src/test/TestUnit.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="555" />
-    <option name="y" value="115" />
-    <option name="width" value="1503" />
-    <option name="height" value="947" />
+    <option name="x" value="179" />
+    <option name="y" value="58" />
+    <option name="width" value="1659" />
+    <option name="height" value="1002" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,18 +251,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Course" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544113068179" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550499626849" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -228,20 +278,69 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="TestUnit.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestUnit.player2WinWithTieBreak">
+    <configuration name="TestUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TennisJava" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestUnit" />
-      <option name="METHOD_NAME" value="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUnit.player1TakeAdvantage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUnit" />
+      <option name="METHOD_NAME" value="player1TakeAdvantage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestUnit.player1WinWithTieBreak" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUnit" />
+      <option name="METHOD_NAME" value="player1WinWithTieBreak" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUnit.player2Win" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUnit" />
+      <option name="METHOD_NAME" value="player2Win" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUnit.player2WinWithTieBreak" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TennisJava" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUnit" />
+      <option name="METHOD_NAME" value="player2WinWithTieBreak" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TestUnit.player1TakeAdvantage" />
+      <item itemvalue="JUnit.TestUnit" />
+      <item itemvalue="JUnit.TestUnit.player2Win" />
+      <item itemvalue="JUnit.TestUnit.player1WinWithTieBreak" />
+      <item itemvalue="JUnit.TestUnit.player2WinWithTieBreak" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestUnit.test" />
+        <item itemvalue="JUnit.TestUnit.player2WinWithTieBreak" />
+        <item itemvalue="JUnit.TestUnit.player1WinWithTieBreak" />
+        <item itemvalue="JUnit.TestUnit" />
+        <item itemvalue="JUnit.TestUnit.player1TakeAdvantage" />
+        <item itemvalue="JUnit.TestUnit.player2Win" />
       </list>
     </recent_temporary>
   </component>
@@ -259,68 +358,68 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestUnit_test - 2018.12.06 at 16h 58m 43s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 33m 21s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 16h 58m 59s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 34m 05s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 16h 59m 40s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 38m 46s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 09m 53s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 39m 36s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 11m 16s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 44m 47s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 13m 15s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 45m 20s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 13m 35s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 45m 33s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 15m 54s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 45m 48s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 16m 26s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player1WinWithTieBreak - 2019.02.18 at 11h 46m 36s.xml">
+      <configuration name="TestUnit.player1WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestUnit_test - 2018.12.06 at 17h 16m 39s.xml">
-      <configuration name="TestUnit.test" configurationId="JUnit" />
+    <history-entry file="TestUnit_player2WinWithTieBreak - 2019.02.18 at 11h 51m 13s.xml">
+      <configuration name="TestUnit.player2WinWithTieBreak" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="555" y="115" width="1503" height="947" extended-state="0" />
+    <frame x="179" y="58" width="1659" height="1002" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982889" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23995052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32982457" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32982457" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25494507" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2857143" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32967034" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -331,86 +430,120 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/TennisMatch.java</url>
-          <line>68</line>
+          <line>203</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/TennisMatch.java</url>
+          <line>207</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/TennisMatch.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/TennisMatch.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="431" column="13" selection-start-line="431" selection-start-column="13" selection-end-line="431" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MatchType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="60">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MatchType.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
           <folding>
-            <element signature="e#155#156#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#129#130#0" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/TennisMatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        <state relative-caret-position="357">
+          <caret line="250" column="51" selection-start-line="250" selection-start-column="51" selection-end-line="250" selection-end-column="51" />
           <folding>
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#1825#1826#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="e#2054#2055#0" expanded="true" />
-            <element signature="e#2081#2082#0" expanded="true" />
+            <element signature="e#9658#9659#0" expanded="true" />
+            <element signature="e#9694#9695#0" expanded="true" />
+            <element signature="e#9754#9755#0" expanded="true" />
+            <element signature="e#9824#9825#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/TestUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        <state relative-caret-position="359">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
