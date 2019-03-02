@@ -27,11 +27,17 @@ public class TennisMatch {
                 } else {
                     player1.getScore().decisifGame.setPointForGame(0,String.valueOf(Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0)) + 1));
                 }
-                if (tieBreak) {
-                    endSetWithTieBreak();
+                if (player1.getScore().getSets().winSet == player2.getScore().getSets().winSet
+                        && player1.getScore().getSets().winSet + player2.getScore().getSets().winSet + 1 == matchType.maxNumberOfSetsToWin()) {
+                    if (tieBreak) {
+                        endSetWithTieBreak();
+                    } else {
+                        endSetWithoutTieBreak();
+                    }
+
                 }
                 else {
-                    endSetWithoutTieBreak();
+                    endSetWithTieBreak();
                 }
             } else {
                 if (player2.getScore().decisifGame == null) {
@@ -140,6 +146,20 @@ public class TennisMatch {
             return false;
         } else if (player1.getScore().decisifGame != null && player2.getScore().decisifGame != null) {
 
+            if (Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))  == 6
+                    && Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))  <= 4 ) {
+                setPlayerWinSetWithTieBreak(player1);
+                player1.getScore().decisifGame = null;
+                player2.getScore().decisifGame = null;
+                return true;
+            }
+            if (Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))  == 6
+                    && Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))  <= 4) {
+                setPlayerWinSetWithTieBreak(player2);
+                player1.getScore().decisifGame = null;
+                player2.getScore().decisifGame = null;
+                return true;
+            }
             if (Integer.valueOf(player1.getScore().decisifGame.getPointForGame(0))  == 7
                     && Integer.valueOf(player2.getScore().decisifGame.getPointForGame(0))  <= 5 ) {
                 setPlayerWinSetWithTieBreak(player1);
